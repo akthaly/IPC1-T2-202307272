@@ -24,6 +24,7 @@ public class Tarea2 {
             System.out.println("2. Resta");
             System.out.println("3. Multiplicacion");
             System.out.println("4. Division");
+            System.out.println("5. Salir");
             System.out.println("");
             opcion = scanner.nextInt();
             
@@ -48,7 +49,12 @@ public class Tarea2 {
                 division(scanner);
                 
             }
-        } while (opcion !=4);
+            
+            if (opcion == 5) {
+                
+                break;
+            }
+        } while (opcion !=5);
         
     }
     public static void suma(Scanner scanner){
@@ -62,7 +68,7 @@ public class Tarea2 {
                 b = scanner.nextInt();
                 System.out.println("");
                 c = a + b;
-                System.out.println("la suma de " + a + "+" + b + " es: ");
+                System.out.print("la suma de " + a + "+" + b + " es: ");
                 System.out.println(c);
                 System.out.println("");
                 
@@ -82,8 +88,8 @@ public class Tarea2 {
         System.out.println("");
         b = scanner.nextInt();
         System.out.println("");
-        System.out.println("La diferencia es: ");
         c = a-b;
+        System.out.print("La diferencia de " + a + "-" + b + " es: ");
         System.out.println(c);
         System.out.println("");
     }
@@ -106,11 +112,11 @@ public class Tarea2 {
         
     }
     public static void division(Scanner scanner){
-        System.out.println("Coloque dos números que desee dividir");
+        System.out.println("Coloque dos numeros que desee dividir");
         System.out.println("");
-        int numerador = 1;
-        int denominador = 1;
-        int resultado = 0;
+        float numerador = 1;
+        float denominador = 1;
+        float resultado;
         System.out.println("Coloque el numerador: ");
         numerador = scanner.nextInt();
         System.out.println("");
@@ -119,9 +125,9 @@ public class Tarea2 {
         System.out.println("");
         if (denominador != 0){
             resultado = numerador / denominador;
-            System.out.println("La division de " + numerador + "/" + denominador + "es: ");
-            System.out.println("");
+            System.out.print("La division de " + numerador + "/" + denominador + " es: ");
             System.out.println(resultado);
+            System.out.println("");
         }
         else{
             System.out.println("No se puede dividir dentro de cero, vuelva a ingresar datos: ");
